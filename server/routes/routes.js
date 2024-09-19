@@ -3,6 +3,7 @@ const routes = express.Router()
 
 const Model = require('../models/models')
 
+//loading all the CRUD (create, revoke, update, remove) operations 
 // Store user data
 routes.post('/save_user', async (req, res) => {  
     const data = new Model({

@@ -27,6 +27,7 @@ app.use(express.json())
 
 app.use('/api', routes)
 
+// TO execute the backend server connecting to port 
 const port = process.env.PORT || 3000
 
 // app.get('/', (req, res) => {
@@ -40,7 +41,7 @@ const port = process.env.PORT || 3000
 //     })
 // })
 
-
+// TO execute the backend server connecting to port 
 app.listen(port, () => {
     if (process.env.port == 3200) {
         console.log(`Backend Node server is running ${port}`)
