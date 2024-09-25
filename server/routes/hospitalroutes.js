@@ -5,11 +5,11 @@ const Model = require('../models/hospitalmodels')
 
 //loading all the CRUD (create, revoke, update, remove) operations 
 // Store user data
-routes.post('/save_hospital', async (req, res) => {  
+hospitalroutesroutes.post('/save_hospital', async (req, res) => {  
     const data = new Model({
-        hosiptal_name: req.body.name,
-        rating: req.body.age,
-        address: req.body.chronic_illness
+        hospital_name: req.body.hospital,
+        rating: req.body.rating,
+        address: req.body.address
     })
 
     try{
@@ -28,7 +28,7 @@ routes.post('/save_hospital', async (req, res) => {
 })
 
 // Fetch all the user documents
-routes.get('/get_hospital', async (req, res) => {
+hospitalroutes.get('/get_hospital', async (req, res) => {
     const output = await Model.find()
     res.status(200).json({
         status: true,
@@ -38,7 +38,7 @@ routes.get('/get_hospital', async (req, res) => {
 })
 
 // Load Individual Document
-routes.get('/get_hospital/:id', async (req, res) => {
+hospitalroutes.get('/get_hospital/:id', async (req, res) => {
     const output = await Model.findById(req.params.id)
     res.status(200).json({
         status: true,
@@ -49,7 +49,7 @@ routes.get('/get_hospital/:id', async (req, res) => {
 
 
 // Load Individual Document
-routes.delete('/delete_hospital/:id', async (req, res) => {
+hospitalroutes.delete('/delete_hospital/:id', async (req, res) => {
     res.status(200).json({
         status: true,
         message: "hospital data deleted successfully!",

@@ -5,7 +5,7 @@ const Model = require('../models/doctormodels')
 
 //loading all the CRUD (create, revoke, update, remove) operations 
 // Store user data
-routes.post('/save_doctor', async (req, res) => {  
+doctorroutes.post('/save_doctor', async (req, res) => {  
     const data = new Model({
         doctor_name: req.body.doctor_namename,
         service: req.body.service,
@@ -31,7 +31,7 @@ routes.post('/save_doctor', async (req, res) => {
 })
 
 // Fetch all the user documents
-routes.get('/get_doctor', async (req, res) => {
+doctorroutes.get('/get_doctor', async (req, res) => {
     const output = await Model.find()
     res.status(200).json({
         status: true,
@@ -41,7 +41,7 @@ routes.get('/get_doctor', async (req, res) => {
 })
 
 // Load Individual Document
-routes.get('/get_doctor/:id', async (req, res) => {
+doctorroutes.get('/get_doctor/:id', async (req, res) => {
     const output = await Model.findById(req.params.id)
     res.status(200).json({
         status: true,
@@ -52,7 +52,7 @@ routes.get('/get_doctor/:id', async (req, res) => {
 
 
 // Load Individual Document
-routes.delete('/delete_doctor/:id', async (req, res) => {
+doctorroutes.delete('/delete_doctor/:id', async (req, res) => {
     res.status(200).json({
         status: true,
         message: "doctor data deleted successfully!",
