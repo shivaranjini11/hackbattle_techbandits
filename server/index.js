@@ -18,14 +18,18 @@ app.use(cors({
 // Load Mongo DB connection object
 const connect = require('./config/db')
 connect()
+const connect = require('./config/hospitaldb')
+connect()
 
 // loading routes.js file
 const routes = require('./routes/routes')
+const hospitalroutes = require('./routes/hospitalroutes')
 
 
 app.use(express.json())
 
 app.use('/api', routes)
+app.use('/hosapi', hospitalroutes)
 
 // TO execute the backend server connecting to port 
 const port = process.env.PORT || 3000
