@@ -1,0 +1,19 @@
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const hospitalSchema = Schema({
+    hospital_name:{
+        type: String,
+        required: true
+    },
+    rating:{
+        type: Number,
+        required: true
+    },
+    address:{
+        type: String,
+        required: false
+    }
+})
+
+module.exports = mongoose.model('hospital', hospitalSchema)
