@@ -12,7 +12,7 @@ const hospitalSchema = Schema({
     },
     address:{
         type: String,
-        required: false
+        required: true
     }
 })
 
