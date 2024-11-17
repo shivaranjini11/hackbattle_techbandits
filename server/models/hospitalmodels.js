@@ -16,4 +16,4 @@ const hospitalSchema = Schema({
     }
 })
 
-module.exports = mongoose.model('hospital', hospitalSchema)
+module.exports = mongoose.model('hospitalmodel', hospitalSchema)

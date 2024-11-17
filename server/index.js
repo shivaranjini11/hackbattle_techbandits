@@ -18,10 +18,6 @@ app.use(cors({
 // Load Mongo DB connection object
 const connect = require('./config/db')
 connect()
-const connecting = require('./config/hospitaldb')
-connecting()
-const connection = require('./config/doctor')
-connection()
 
 // loading routes.js file
 const routes = require('./routes/routes')

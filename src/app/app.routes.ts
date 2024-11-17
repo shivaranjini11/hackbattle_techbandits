@@ -5,6 +5,7 @@ import { PatientsListComponent } from './main/patients-list/patients-list.compon
 import { AadharauthComponent } from './personal/aadharauth/aadharauth.component';
 import { PageNotFoundComponent } from './others/page-not-found/page-not-found.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { CreatepatientComponent } from './main/createpatient/createpatient.component';
 
 export const routes: Routes = [
     {path:'', redirectTo:"sign-in", pathMatch: 'full'},
@@ -13,6 +14,7 @@ export const routes: Routes = [
     {path: "sign-out", component: SignOutComponent},
     {path:"patients-list", component: PatientsListComponent},
     {path:"aadharauth", component:AadharauthComponent},
+    {path:"create-patient", component:CreatepatientComponent},
     {path: "**", component:PageNotFoundComponent}
 
 

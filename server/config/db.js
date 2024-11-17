@@ -2,7 +2,7 @@ require('dotenv').config()
 const mongoose = require('mongoose')//loading mongoose file 
 
 function establishConnection(){
-    mongoose.connect(process.env.MONGO_DB_CONNECTION_URL).then(
+    mongoose.connect('mongodb+srv://shivaranjinirameshkumar:4l21uRqtzd4FnlUC@hackbattle.jnlg1.mongodb.net/').then(
         ()=>{console.log('Mongo DB connection successful!')}
     ).catch(
         (e)=>{

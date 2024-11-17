@@ -5,7 +5,7 @@ const Model = require('../models/hospitalmodels')
 
 //loading all the CRUD (create, revoke, update, remove) operations 
 // Store user data
-hospitalroutesroutes.post('/save_hospital', async (req, res) => {  
+hospitalroutes.post('/save_hospital', async (req, res) => {  
     const data = new Model({
         hospital_name: req.body.hospital,
         rating: req.body.rating,
